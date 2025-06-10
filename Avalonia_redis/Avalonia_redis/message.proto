@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package Avalonia_VideoMsg;
+
+message VideoMsg {
+  string cmd = 1;
+  bytes frame_data = 2; 
+}
+
+message CMDMsg {
+  string cmd = 1;
+}

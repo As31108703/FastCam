@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Avalonia_redis.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia_redis.Views.MainView"
+             x:DataType="vm:MainViewModel"
+			 Background="Black">
+	<Design.DataContext>
+		<vm:MainViewModel />
+	</Design.DataContext>
+	<Grid>
+		<UniformGrid x:Name="CameraGrid" Rows="{Binding _gridRows}" Columns="{Binding _gridColumns}" Grid.Row="0">
+      <!-- 這裡的 Image 控制項將在程式碼中動態生成 -->
+    </UniformGrid>
+    <!-- 頂層全屏容器，默認為隱藏 -->
+    <Canvas x:Name="FullscreenContainer" Background="Black" IsVisible="False">
+    <Image x:Name="FullscreenImage" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </Canvas>
+	</Grid>
+</UserControl>

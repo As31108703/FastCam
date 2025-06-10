@@ -1,0 +1,20 @@
+    <Window xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:vm="clr-namespace:Avalonia_redis.ViewModels"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:views="clr-namespace:Avalonia_redis.Views"
+            mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+            x:Class="Avalonia_redis.Views.MainWindow"
+            Icon="/Assets/avalonia-logo.ico"
+            Title="Avalonia_redis"
+			Background="Black">
+		<Grid>
+      <UniformGrid x:Name="CameraGrid" Rows="{Binding _gridRows}" Columns="{Binding _gridColumns}" Grid.Row="0">
+        <!-- 這裡的 Image 控制項將在程式碼中動態生成 -->
+      </UniformGrid>
+      <Canvas x:Name="FullscreenContainer" Background="Black" IsVisible="False">
+        <Image x:Name="FullscreenImage" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+      </Canvas>
+		</Grid>
+    </Window>
